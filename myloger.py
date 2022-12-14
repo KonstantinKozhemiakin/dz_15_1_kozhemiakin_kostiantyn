@@ -6,8 +6,6 @@ import sys
 
 
 def init_my_loger():
-    global logger
-
     logger = logging.getLogger('my_loger')
     logger.setLevel(logging.DEBUG)
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -26,5 +24,6 @@ def init_my_loger():
     filehandlererror.setLevel(logging.ERROR)
     filehandlererror.setFormatter(formatter)
     logger.addHandler(filehandlererror)
+    return logger
 # init_my_loger()
 # logger.info('dkglwdgk')
